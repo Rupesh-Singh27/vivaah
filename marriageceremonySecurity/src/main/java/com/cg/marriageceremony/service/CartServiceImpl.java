@@ -51,9 +51,15 @@ public class CartServiceImpl implements CartService {
 		}
 		
 		int cid= cartData.getCustomerId();
-		Customer c=custRepo.findById(cid).get();
+		Customer customer=custRepo.findById(cid);
+		if(customer.isPresent()){
+			Customer c = customer.get();
+		}
 		int vid= cartData.getVendorId();
-		Vendor v= venRepo.findById(vid).get();
+		Vendor vendor = venRepo.findById(vid);
+		if(vendor.isPresent()){
+			Vendor v = vendor.get();
+		}
 		CartItems cart= new CartItems();
 		cart.setCustomer(c);
 		cart.setVendor(v);
