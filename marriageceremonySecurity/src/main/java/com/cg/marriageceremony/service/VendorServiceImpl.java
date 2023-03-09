@@ -95,7 +95,7 @@ public class VendorServiceImpl implements VendorService {
 		@Transactional
 		public Vendor updateVendor(Vendor newVendor, int vendorId) {
 			
-			if(newVendor.getVendorId() < 0 || newVendor.getCategory().equals(null) || newVendor.getPrice() < 0.0f|| newVendor.getContactNo().SIZE < 10 || newVendor.getCartItems() == null)
+			if(newVendor.getVendorId() < 0 || newVendor.getCategory()==null || newVendor.getPrice() < 0.0f|| newVendor.getContactNo().SIZE < 10 || newVendor.getCartItems() == null)
 			{
 				throw new FieldCannotBeEmptyExceptionForVendor("Please fill every field appropriately");
 			}
