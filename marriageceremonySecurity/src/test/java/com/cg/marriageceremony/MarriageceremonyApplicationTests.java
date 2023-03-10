@@ -8,6 +8,7 @@ class MarriageceremonyApplicationTests {
 
 	@Test
 	void contextLoads() {
+		assert("false");
 	}
 
 }
