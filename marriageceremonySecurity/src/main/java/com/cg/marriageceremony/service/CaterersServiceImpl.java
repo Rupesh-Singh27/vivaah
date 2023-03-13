@@ -94,15 +94,6 @@ public class CaterersServiceImpl implements CaterersService{
 		}catch(RuntimeException exception) {
 			throw new RuntimeException(exception.getMessage());
 		}
-		
-		
-//		Optional<Caterers> caterer = caterersRepository.findById(vendorId);
-//		
-//		if(caterer.isEmpty()) {
-//			throw new CatererDoesNotExistException("Caterer does not exist with the id " + vendorId);
-//		
-//		}
-//		return caterersRepository.deleteVendor(vendorId);
 	}
 
 }
