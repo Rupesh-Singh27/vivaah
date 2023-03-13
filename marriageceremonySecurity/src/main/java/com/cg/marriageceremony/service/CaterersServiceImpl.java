@@ -59,12 +59,6 @@ public class CaterersServiceImpl implements CaterersService{
 		}catch(RuntimeException exception) {
 			throw new RuntimeException(exception.getMessage());
 		}
-//		List<Caterers> caterersList=caterersRepository.findAll();
-//		
-//		if(caterersList.isEmpty()) {
-//			throw new NoCatererPresentException("There in no caterers present in database");
-//		}
-//		return caterersList;
 	}
 
 	@Override
