@@ -3,7 +3,6 @@ package com.cg.marriageceremony.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.management.RuntimeErrorException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -12,12 +11,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cg.marriageceremony.exceptions.MarriageCeremonyApplicationException;
-import com.cg.marriageceremony.exceptions.NoCatererPresentException;
 import com.cg.marriageceremony.exceptions.CatererDoesNotExistException;
 import com.cg.marriageceremony.exceptions.FieldCannotBeEmptyException;
+import com.cg.marriageceremony.exceptions.MarriageCeremonyApplicationException;
+import com.cg.marriageceremony.exceptions.NoCatererPresentException;
 import com.cg.marriageceremony.model.Caterers;
-import com.cg.marriageceremony.model.Vendor;
 import com.cg.marriageceremony.repository.CaterersRepository;
 
 

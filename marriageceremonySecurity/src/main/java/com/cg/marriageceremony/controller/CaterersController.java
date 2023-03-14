@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.marriageceremony.model.Caterers;
 import com.cg.marriageceremony.service.CaterersService;
 
-import io.swagger.annotations.ApiOperation;
-
 @RestController
 @RequestMapping("/marriageceremony")
 @CrossOrigin(origins = "http://localhost:3000",methods = {RequestMethod.PUT,RequestMethod.GET,RequestMethod.DELETE,RequestMethod.POST})
