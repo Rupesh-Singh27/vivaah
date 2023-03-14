@@ -80,7 +80,6 @@ public class CaterersServiceImpl implements CaterersService{
 	}
 
 	@Override
-	@Transactional
 	public int deleteVendor(int vendorId) {
 		
 		try {
