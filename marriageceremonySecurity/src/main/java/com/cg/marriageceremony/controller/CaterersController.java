@@ -27,26 +27,22 @@ public class CaterersController {
 	@Autowired
 	private CaterersService caterersService;
 	
-	@ApiOperation("Add caterer in database")
 	@PostMapping("caterer/addCaterer")
 	public  Caterers addCateres(@RequestBody  Caterers catarer) {
 		Caterers caterers=caterersService.addCaterers(catarer);
 				return caterers;
 	}
 	
-	@ApiOperation("Get caterers in database")
 	@GetMapping("caterer/getAllCaterers")
 	public List<Caterers> allCateres(){
 		return caterersService.allCateres();
 	}
 	
-	@ApiOperation("Search caterer in database by caterer name")
     @GetMapping("caterer/searchByCatererName")
     public List<Caterers> searchingByName(@RequestParam("cName") String catererName){
     	return caterersService.searchingByName(catererName);
     }
 	
-	@ApiOperation("Delete caterers in database")
     @DeleteMapping("caterer/deleteCaterer/{vendorId}")
     public int deleteVendor(@PathVariable("vendorId") int vendorId) {
     	return caterersService.deleteVendor(vendorId);
